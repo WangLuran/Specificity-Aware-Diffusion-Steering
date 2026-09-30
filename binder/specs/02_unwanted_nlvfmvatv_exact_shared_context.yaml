@@ -1,0 +1,21 @@
+entities:
+  - protein:
+      id: X
+      sequence: 80
+
+  - file:
+      path: ../targets/unwanted_nlvfmvatv_exact_shared_context.pdb
+      include:
+        - chain:
+            id: A
+        - chain:
+            id: B
+        - chain:
+            id: P
+      binding_types:
+        - chain:
+            id: P
+            binding: "3..6"
+        - chain:
+            id: B
+            not_binding: "all"

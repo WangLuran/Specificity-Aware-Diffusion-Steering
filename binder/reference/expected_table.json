@@ -1,0 +1,98 @@
+{
+  "design": {
+    "generation_condition": "wanted target A only",
+    "negative_guidance_enabled": false,
+    "seed_base_start": 20261230,
+    "seed_base_increment": 1000,
+    "shards": 8,
+    "backbones_per_shard": 8,
+    "inverse_folds_per_backbone": 1,
+    "boltz2_predictions_per_condition": 3,
+    "design_steps": 200,
+    "verification_steps": 200
+  },
+  "audit": {
+    "shard00": {
+      "binders": 8,
+      "specificity_rows": 8,
+      "model_score_rows": 48
+    },
+    "shard01": {
+      "binders": 8,
+      "specificity_rows": 8,
+      "model_score_rows": 48
+    },
+    "shard02": {
+      "binders": 8,
+      "specificity_rows": 8,
+      "model_score_rows": 48
+    },
+    "shard03": {
+      "binders": 8,
+      "specificity_rows": 8,
+      "model_score_rows": 48
+    },
+    "shard04": {
+      "binders": 8,
+      "specificity_rows": 8,
+      "model_score_rows": 48
+    },
+    "shard05": {
+      "binders": 8,
+      "specificity_rows": 8,
+      "model_score_rows": 48
+    },
+    "shard06": {
+      "binders": 8,
+      "specificity_rows": 8,
+      "model_score_rows": 48
+    },
+    "shard07": {
+      "binders": 8,
+      "specificity_rows": 8,
+      "model_score_rows": 48
+    }
+  },
+  "statistics": {
+    "boltzgen_target_a_only": {
+      "count": 64,
+      "mean": 0.1785687724283586,
+      "q25": 0.0802634532252948,
+      "median": 0.15871130426724755,
+      "q75": 0.2861846387386322,
+      "max": 0.6043667048215866,
+      "std": 0.16857100692771287,
+      "positive_fraction": 0.875
+    },
+    "cfg": {
+      "count": 64,
+      "mean": 0.16542090056464076,
+      "median": 0.14533121387163794,
+      "q25": 0.05006292462348938,
+      "q75": 0.2832839749753475,
+      "max": 0.6021836151679357,
+      "std": 0.16387016160935983,
+      "positive_fraction": 0.9375
+    },
+    "dng": {
+      "count": 64,
+      "mean": 0.14829744749780124,
+      "median": 0.15805316468079883,
+      "q25": 0.030915324886639922,
+      "q75": 0.2622768841683864,
+      "max": 0.5443080912033718,
+      "std": 0.1632392449408361,
+      "positive_fraction": 0.890625
+    },
+    "ours_prop2": {
+      "count": 64,
+      "mean": 0.18561998750859252,
+      "median": 0.1821851208806038,
+      "q25": 0.06690240278840068,
+      "q75": 0.3336834522585074,
+      "max": 0.5541576345761616,
+      "std": 0.18818411992195433,
+      "positive_fraction": 0.84375
+    }
+  }
+}

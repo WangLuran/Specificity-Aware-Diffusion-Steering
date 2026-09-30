@@ -1,0 +1,14 @@
+{
+  "method": "Ours (Proposition 2)",
+  "related": {
+    "clip_positive": 0.2722,
+    "clip_negative": 0.1413,
+    "margin": 0.1309
+  },
+  "unrelated": {
+    "clip_positive": 0.2679,
+    "clip_negative": 0.0655,
+    "margin": 0.2024
+  },
+  "overall_margin": 0.1666
+}

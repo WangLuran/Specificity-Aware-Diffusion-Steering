@@ -1,0 +1,64 @@
+{
+  "description": "5 prompt pairs from DNG paper (ICLR 2025, Table 2). Each entry has a positive prompt, a related negative prompt (semantically implied by the scene), and an unrelated negative prompt (out-of-context concept). Source: Koulischer et al. 2024, arXiv:2410.14398.",
+  "model": "sd2-community/stable-diffusion-2-1",
+  "n_images_per_prompt": 32,
+  "prompts": [
+    {
+      "id": 1,
+      "name": "Medieval feast",
+      "positive": "A grand medieval feast set in a great hall, filled with long tables covered in bountiful platters of food, goblets, and flickering light, with knights and nobles enjoying the lavish spread.",
+      "related_negative": "Chalices, candles",
+      "unrelated_negative": "Kids playing football",
+      "dng_hyperparams": {"prior": 0.01, "temperature": 0.2, "offset": 0.004}
+    },
+    {
+      "id": 2,
+      "name": "An English breakfast",
+      "positive": "A classic British breakfast, featuring a diverse selection of cooked delights, perfect for a filling and flavorful start to the day.",
+      "related_negative": "Egg, sausage",
+      "unrelated_negative": "The view of a skyline",
+      "dng_hyperparams": {"prior": 0.01, "temperature": 0.3, "offset": 0.003}
+    },
+    {
+      "id": 3,
+      "name": "A dinner table",
+      "positive": "A beautifully set dinner table, with elegant arrangements, a variety of enticing dishes, and delicate decor that speaks to the sophistication of the meal.",
+      "related_negative": "Flowers, wine glasses",
+      "unrelated_negative": "A person wearing sunglasses",
+      "dng_hyperparams": {"prior": 0.01, "temperature": 0.3, "offset": 0.003}
+    },
+    {
+      "id": 4,
+      "name": "An art workshop",
+      "positive": "An inspiring art workshop filled with creativity, featuring a wide range of tools and materials used by participants working on their individual projects.",
+      "related_negative": "Paintbrush, canvases",
+      "unrelated_negative": "A bicycle in the rain",
+      "dng_hyperparams": {"prior": 0.01, "temperature": 0.2, "offset": 0.002}
+    },
+    {
+      "id": 5,
+      "name": "An antique store",
+      "positive": "A charming antique store with shelves and tables filled with unique and historical treasures, offering a glimpse into the past.",
+      "related_negative": "Lamps, old books",
+      "unrelated_negative": "An electric toothbrush",
+      "dng_hyperparams": {"prior": 0.01, "temperature": 0.2, "offset": 0.004}
+    }
+  ],
+  "evaluation": {
+    "figure_1_related": {
+      "description": "Related negative prompt figure: measures B suppression vs quality preservation",
+      "x_axis": "CLIP(guided_image, positive_prompt) — A preservation",
+      "y_axis": "CLIP(guided_image, related_negative_prompt) — B semantic presence (lower = better suppression)"
+    },
+    "figure_2_unrelated": {
+      "description": "Unrelated negative prompt figure: measures guidance conservatism",
+      "x_axis": "CLIP(guided_image, positive_prompt) — A preservation",
+      "y_axis": "CLIP(guided_image, unguided_image) — image change (higher = less invasive)"
+    },
+    "figure_3_quality": {
+      "description": "HPS-v2 quality preservation across guidance scales",
+      "x_axis": "guidance scale lambda",
+      "y_axis": "HPS-v2(positive_prompt, guided_image)"
+    }
+  }
+}
