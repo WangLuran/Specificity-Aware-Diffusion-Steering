@@ -1,6 +1,6 @@
 # Specificity-Aware Diffusion Steering via Variance-Reduced Sequential Monte Carlo
 
-This repository reproduce the main results in the NeurlPS2026 Paper: 
+This repository reproduce the main results in the NeurlPS2026 Paper: Specificity-Aware Diffusion Steering via Variance-Reduced Sequential Monte Carlo
 
 ## Installation
 
