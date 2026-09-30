@@ -1,9 +1,9 @@
-# Proposition-2 negative guidance experiments
+# Negative guidance experiments
 
 This repository contains the two experiment packages used for the reported
 text-to-image and specificity-aware pMHC binder results.
 
-- `t2i/` runs only **Ours (Proposition 2)** on the fixed five prompts with
+- `t2i/` runs only **Ours** on the fixed five prompts with
   related and unrelated negatives (10 conditions). It does not include the
   historical hyperparameter search or T2I baseline launchers.
 - `binder/` runs the matched 64-binder experiment for Proposition 2 and the
