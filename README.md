@@ -1,22 +1,6 @@
-# Negative guidance experiments
+# Specificity-Aware Diffusion Steering via Variance-Reduced Sequential Monte Carlo
 
-This repository contains the two experiment packages used for the reported
-text-to-image and specificity-aware pMHC binder results.
-
-- `t2i/` runs only **Ours** on the fixed five prompts with
-  related and unrelated negatives (10 conditions). It does not include the
-  historical hyperparameter search or T2I baseline launchers.
-- `binder/` runs the matched 64-binder experiment for Proposition 2 and the
-  three reported baselines: target-A-only BoltzGen, fixed CFG, and DNG.
-
-The committed reference CSVs contain the measured per-condition and per-binder
-results, not hard-coded table values. The summary programs recompute the paper
-rows from those CSVs. Run the
-lightweight reproducibility check with:
-
-```bash
-python -m pytest -q
-```
+This repository reproduce the main results in the NeurlPS2026 Paper: 
 
 ## Installation
 
